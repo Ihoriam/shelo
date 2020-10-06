@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<main>
+
+		<section>
+			<h2>Популярные</h2>
+
+			{% for i in range(3) %}
+        		<div class="preview">
+					<a href="{{url_for('brand_page', id_brand=brands[i].id) }}">
+						<img src="../static/images/{{logos[i].file_name}}.png" width="200px">
+					</a>
+					<div class="preview-text">
+						<h3><a href="{{url_for('brand_page', id_brand=brands[i].id) }}">{{brands[i].name}}</a></h3>
+					</div>
+				</div>
+        	{% endfor %}
+		</section>
+
+		<section>
+			<h2>Техника</h2>
+			<div class="preview">
+				<a href="#"><img src="../static/images/techLogo/samsung.svg" width="200px"></a>
+				<div class="preview-text">
+					<h3><a href="">Samsung</a></h3>
+				</div>
+			</div>
+			<div class="preview">
+				<a href="ibm.html"><img src="../static/images/techLogo/ibm.svg" width="200px"></a>
+				<div class="preview-text">
+					<h3><a href="ibm.html">IBM</a></h3>
+				</div>
+			</div>
+			<div class="preview">
+				<a href="#"><img src="../static/images/techLogo/apple.svg" width="200px"></a>
+				<div class="preview-text">
+					<h3><a href="">Apple</a></h3>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>Гейм-дэв</h2>
+			<div class="preview">
+				<a href="ubisoft.html"><img src="../static/images/gameLogo/ubisoft.svg" width="200px"></a>
+				<div class="preview-text">
+					<h3><a href="ubisoft.html">Ubisoft</a></h3>
+				</div>
+			</div>
+			<div class="preview">
+				<a href="#"><img src="../static/images/gameLogo/rockstar.svg" width="200px"></a>
+				<div class="preview-text">
+					<h3><a href="">Rockstar</a></h3>
+				</div>
+			</div>
+			<div class="preview">
+				<a href="#"><img src="../static/images/gameLogo/ea.svg" width="200px"></a>
+				<div class="preview-text">
+					<h3><a href="">EA</a></h3>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>Автомобили</h2>
+			<div class="preview">
+				<a href="#"><img src="../static/images/carLogo/astonmartin.svg" width="200px"></a>
+				<div class="preview-text">
+					<h3><a href="">Aston Martin</a></h3>
+				</div>
+			</div>
+			<div class="preview">
+				<a href="#"><img src="../static/images/carLogo/bmw.svg" width="200px"></a>
+				<div class="preview-text">
+					<h3><a href="">BMW</a></h3>
+				</div>
+			</div>
+			<div class="preview">
+				<a href="#"><img src="../static/images/carLogo/audi.svg" width="200px"></a>
+				<div class="preview-text">
+					<h3><a href="">Audi</a></h3>
+				</div>
+			</div>
+		</section>
+	</main>
+{% endblock %}
+

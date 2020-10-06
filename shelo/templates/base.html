@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Shelter Logo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<link rel="shortcut icon" href="../static/images/mainLogo/logoIcon.ico">
+</head>
+
+<body>
+
+	<header>
+		<div class="header-logo">
+			<a href="{{url_for('main')}}"><img src="../static/images/mainLogo/logo.png"></a>
+		</div>
+		<nav class="header-nav">
+			<a href="#">Категории</a>
+			<a href="#">Блог</a>
+			<a href="https://github.com/Ihoriam">Github</a>
+			<a href="https://youtu.be/dQw4w9WgXcQ">О проекте</a>
+		</nav>
+	</header>
+
+	<div id="return-up">
+		<a href="#"><img src="../static/images/mainLogo/up-arrow.svg" alt="arrow"></a>
+	</div>
+
+	{% block content %}{% endblock %}
+
+	<footer>
+		<div class="footer-top">
+			<p>Автор: Игнатенко Игорь</p>
+		</div>
+		<div class="footer-bottom">
+			<p>Сайт работает на фреймворке Flask</p>
+		</div>
+
+	</footer>
+</body>
+
+</html>

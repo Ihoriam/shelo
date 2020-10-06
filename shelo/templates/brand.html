@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<hr>
+    <main>
+        <div class="history-text">
+            <h2>{{brand.name}}</h2>
+            <h3>Основание: {{brand.year}}</h3>
+            <h3>Расположение: {{country.name}}</h3>
+            <p>{{brand.description}}</p>
+        </div>
+
+        {% for logo in logos %}
+            <div class="history-logo">
+                <figure>
+                    <img src="../static/images/{{logo.file_name}}.png">
+                    <figcaption>{{logo.year}}</figcaption>
+                </figure>
+                <div class="about-logo">
+                    <p>{{logo.description}}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </main>
+
+    <div class="clear"></div>
+
+{% endblock %}
